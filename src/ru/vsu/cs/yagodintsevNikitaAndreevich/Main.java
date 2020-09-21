@@ -28,10 +28,12 @@ public class Main {
         System.out.println(time);
     }
 
+    // get the meeting delta time (from 0 to time) of two cars
     public static int getMeetTime(){
         return (int) Math.round((-(speed1 + speed2)) + Math.sqrt(Math.pow(speed1 + speed2, 2) + (acceleration1+acceleration2)*2*distance)/(acceleration1+acceleration2));
     }
 
+    // set default variable values
     private static void setValues(){
         Scanner scanner = new Scanner(System.in);
 
@@ -49,18 +51,8 @@ public class Main {
 
         System.out.print("Введите начальное расстояние между автомобилями:");
         Main.distance = scanner.nextInt();
-
-        //System.out.print(speed1 + " " + speed2);
     }
 
-//    private static void setValues(int speed1, int speed2, int acceleration1, int acceleration2, int distance){
-//        Scanner scanner = new Scanner(System.in);
-//
-//        System.out.print("Введите скорость первого автомобиля:");
-//        int a = scanner.nextInt();
-//
-//        System.out.print(a);
-//    }
 
 
 }
