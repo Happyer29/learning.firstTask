@@ -24,13 +24,13 @@ public class Main {
 
 
         setValues();
-        int time = getMeetTime();
+        double time = getMeetTime();
         System.out.println(time);
     }
 
     // get the meeting delta time (from 0 to time) of two cars
-    public static int getMeetTime(){
-        return (int) (Math.round((-(speed1 + speed2)) + Math.sqrt(Math.pow(speed1 + speed2, 2) + (acceleration1+acceleration2)*2*distance)))/2;
+    public static double getMeetTime(){
+        return ((-(speed1 + speed2)) + Math.sqrt(Math.pow(speed1 + speed2, 2) + (acceleration1+acceleration2)*2*distance))/2;
     }
 
     // set default variable values
