@@ -30,7 +30,7 @@ public class Main {
 
     // get the meeting delta time (from 0 to time) of two cars
     public static int getMeetTime(){
-        return (int) Math.round((-(speed1 + speed2)) + Math.sqrt(Math.pow(speed1 + speed2, 2) + (acceleration1+acceleration2)*2*distance)/(acceleration1+acceleration2));
+        return (int) (Math.round((-(speed1 + speed2)) + Math.sqrt(Math.pow(speed1 + speed2, 2) + (acceleration1+acceleration2)*2*distance)))/2;
     }
 
     // set default variable values
